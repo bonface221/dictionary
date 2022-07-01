@@ -23,6 +23,7 @@ searchInput.addEventListener('keyup', (e) => {
   }
 })
 function evaluate(data) {
+  wrapper.classList.add("active");
   cleaned_data = data[0].meanings[0]
   meaning.textContent = cleaned_data.definitions[0].definition
   if (cleaned_data.definitions[0].example) {
@@ -46,7 +47,7 @@ function errorhandler() {
 // fetch api function
 function fetchApi(word) {
   infoText.style.color = "#000";
-  // wrapper.classList.remove("active");
+  wrapper.classList.remove("active");
   infoText.innerHTML = `Searching the meaning of <span>"${word}"</span>`;
   let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
   fetch(url)
@@ -58,5 +59,3 @@ function fetchApi(word) {
   ));  
    
 }
-
-wrapper.classList.add('active')
