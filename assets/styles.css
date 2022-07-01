@@ -54,7 +54,7 @@ body {
   font-weight: 700;
 }
 .wrapper.active ul {
-  height: 303px;
+  height: fit-content;
   opacity: 1;
 }
 .wrapper.active .info-text {
@@ -116,7 +116,7 @@ ul .word i {
   cursor: pointer;
 }
 ul .content {
-  max-height: 215px;
+  
   overflow-y: auto;
 }
 ul .content::-webkit-scrollbar {
